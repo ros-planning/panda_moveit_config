@@ -20,13 +20,13 @@
       <joint name="panda_joint7" value="0.785" />
     </group_state>
     <group_state name="extended" group="panda_arm">
-      <joint name="panda_joint1" value="0" />
-      <joint name="panda_joint2" value="0" />
-      <joint name="panda_joint3" value="0" />
-      <joint name="panda_joint4" value="0" />
-      <joint name="panda_joint5" value="0" />
-      <joint name="panda_joint6" value="0" />
-      <joint name="panda_joint7" value="0.785" />
+      <joint name="panda_joint1" value="1.689" />
+      <joint name="panda_joint2" value="0.373" />
+      <joint name="panda_joint3" value="-2.897" />
+      <joint name="panda_joint4" value="-0.84" />
+      <joint name="panda_joint5" value="0.05" />
+      <joint name="panda_joint6" value="0.45" />
+      <joint name="panda_joint7" value="-1.18" />
     </group_state>
     <group_state name="transport" group="panda_arm">
       <joint name="panda_joint1" value="0" />
@@ -41,6 +41,18 @@
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="floating" parent_frame="world" child_link="panda_link0" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="panda_hand" link2="panda_leftfinger" reason="Adjacent" />
+    <disable_collisions link1="panda_hand" link2="panda_link3" reason="Never" />
+    <disable_collisions link1="panda_hand" link2="panda_link4" reason="Never" />
+    <disable_collisions link1="panda_hand" link2="panda_link5" reason="Default" />
+    <disable_collisions link1="panda_hand" link2="panda_link6" reason="Never" />
+    <disable_collisions link1="panda_hand" link2="panda_link7" reason="Adjacent" />
+    <disable_collisions link1="panda_hand" link2="panda_rightfinger" reason="Adjacent" />
+    <disable_collisions link1="panda_leftfinger" link2="panda_link3" reason="Never" />
+    <disable_collisions link1="panda_leftfinger" link2="panda_link4" reason="Never" />
+    <disable_collisions link1="panda_leftfinger" link2="panda_link6" reason="Never" />
+    <disable_collisions link1="panda_leftfinger" link2="panda_link7" reason="Never" />
+    <disable_collisions link1="panda_leftfinger" link2="panda_rightfinger" reason="Default" />
     <disable_collisions link1="panda_link0" link2="panda_link1" reason="Adjacent" />
     <disable_collisions link1="panda_link0" link2="panda_link2" reason="Never" />
     <disable_collisions link1="panda_link0" link2="panda_link3" reason="Never" />
